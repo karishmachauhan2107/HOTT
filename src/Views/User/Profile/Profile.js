@@ -26,25 +26,25 @@ const useStyles = (theme) => ({
   },
 });
 
-class Request extends Component {
+class Profile extends Component {
   constructor() {
     super();
     this.state = {
-      location: "",
-      landmark: "",
-      cause: "",
+      name: "",
+      phone: "",
       st: false,
     };
   }
-
+  
   render() {
     const { classes } = this.props;
     return (
+      
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <div className={classes.paper}>
           <Typography component="h1" variant="h5">
-          Emergency Request
+            My Profile
           </Typography>
 
           <div className={classes.form} noValidate>
@@ -53,10 +53,10 @@ class Request extends Component {
               margin="normal"
               required
               fullWidth
-              id="location"
-              label="Enter your location"
-              name="location"
-              autoComplete="location"
+              id="name"
+              label="Enter your name"
+              name="name"
+              autoComplete="name"
               autoFocus
               onChange={this.handleChangeFields}
             />
@@ -66,22 +66,9 @@ class Request extends Component {
               margin="normal"
               required
               fullWidth
-              name="landmark"
-              label="Enter the landmark"
-              id="landmark"
-              autoComplete="landmark"
-              onChange={this.handleChangeFields}
-            />
-
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              name="cause"
-              label="Enter the cause"
-              id="cause"
-              autoComplete="cause"
+              name="phone"
+              label="Enter your phone number"
+              id="phone"
               onChange={this.handleChangeFields}
             />
 
@@ -92,13 +79,12 @@ class Request extends Component {
               color="primary"
               className={classes.submit}
             >
-              Next{" "}
+              UPDATE{" "}
             </Button>
-            {/* <ToastContainer /> */}
           </div>
         </div>
       </Container>
     );
   }
 }
-export default withStyles(useStyles)(Request);
+export default withStyles(useStyles)(Profile);

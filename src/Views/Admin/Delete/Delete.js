@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-class ResponseStatus extends Component
+class Delete extends Component
 {
     render()
     {
@@ -12,4 +12,4 @@ class ResponseStatus extends Component
     }
 }
 
-export default ResponseStatus;
+export default Delete;

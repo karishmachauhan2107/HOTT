@@ -26,13 +26,16 @@ const useStyles = (theme) => ({
   },
 });
 
-class Request extends Component {
+class Create extends Component {
   constructor() {
     super();
     this.state = {
-      location: "",
-      landmark: "",
-      cause: "",
+      name: "",
+      age: "",
+      phone: "",
+      adhar: "",
+      city: "",
+      state: "",
       st: false,
     };
   }
@@ -44,7 +47,7 @@ class Request extends Component {
         <CssBaseline />
         <div className={classes.paper}>
           <Typography component="h1" variant="h5">
-          Emergency Request
+          Create
           </Typography>
 
           <div className={classes.form} noValidate>
@@ -53,10 +56,10 @@ class Request extends Component {
               margin="normal"
               required
               fullWidth
-              id="location"
-              label="Enter your location"
-              name="location"
-              autoComplete="location"
+              id="name"
+              label="name"
+              name="name"
+              autoComplete="name"
               autoFocus
               onChange={this.handleChangeFields}
             />
@@ -66,10 +69,10 @@ class Request extends Component {
               margin="normal"
               required
               fullWidth
-              name="landmark"
-              label="Enter the landmark"
-              id="landmark"
-              autoComplete="landmark"
+              name="age"
+              label="age"
+              id="age"
+              autoComplete="age"
               onChange={this.handleChangeFields}
             />
 
@@ -78,10 +81,46 @@ class Request extends Component {
               margin="normal"
               required
               fullWidth
-              name="cause"
-              label="Enter the cause"
-              id="cause"
-              autoComplete="cause"
+              name="phone no."
+              label="phone no."
+              id="phone"
+              autoComplete="phone no."
+              onChange={this.handleChangeFields}
+            />
+
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              name="adhar no."
+              label="adhar no."
+              id="adhar"
+              autoComplete="adhar no."
+              onChange={this.handleChangeFields}
+            />
+
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              name="city"
+              label="city"
+              id="city"
+              autoComplete="city"
+              onChange={this.handleChangeFields}
+            />
+
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              name="state"
+              label="state"
+              id="state"
+              autoComplete="state"
               onChange={this.handleChangeFields}
             />
 
@@ -94,11 +133,10 @@ class Request extends Component {
             >
               Next{" "}
             </Button>
-            {/* <ToastContainer /> */}
           </div>
         </div>
       </Container>
     );
   }
 }
-export default withStyles(useStyles)(Request);
+export default withStyles(useStyles)(Create);

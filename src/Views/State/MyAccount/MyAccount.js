@@ -26,25 +26,29 @@ const useStyles = (theme) => ({
   },
 });
 
-class Request extends Component {
+class Profile extends Component {
   constructor() {
     super();
     this.state = {
-      location: "",
-      landmark: "",
-      cause: "",
+      name: "",
+      age: "",
+      phone: "",
+      adhar: "",
+      city: "",
+      state: "",
       st: false,
     };
   }
-
+  
   render() {
     const { classes } = this.props;
     return (
+      
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <div className={classes.paper}>
           <Typography component="h1" variant="h5">
-          Emergency Request
+            My Profile
           </Typography>
 
           <div className={classes.form} noValidate>
@@ -53,10 +57,10 @@ class Request extends Component {
               margin="normal"
               required
               fullWidth
-              id="location"
-              label="Enter your location"
-              name="location"
-              autoComplete="location"
+              id="name"
+              label="name"
+              name="name"
+              autoComplete="name"
               autoFocus
               onChange={this.handleChangeFields}
             />
@@ -66,10 +70,11 @@ class Request extends Component {
               margin="normal"
               required
               fullWidth
-              name="landmark"
-              label="Enter the landmark"
-              id="landmark"
-              autoComplete="landmark"
+              id="age"
+              label="age"
+              name="age"
+              autoComplete="age"
+              autoFocus
               onChange={this.handleChangeFields}
             />
 
@@ -78,10 +83,50 @@ class Request extends Component {
               margin="normal"
               required
               fullWidth
-              name="cause"
-              label="Enter the cause"
-              id="cause"
-              autoComplete="cause"
+              id="phone"
+              label="phone no."
+              name="phone no."
+              autoComplete="phone no."
+              autoFocus
+              onChange={this.handleChangeFields}
+            />
+
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              id="adhar"
+              label="adhar no."
+              name="adhar no."
+              autoComplete="adhar no."
+              autoFocus
+              onChange={this.handleChangeFields}
+            />
+
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              id="city"
+              label="city"
+              name="city"
+              autoComplete="city"
+              autoFocus
+              onChange={this.handleChangeFields}
+            />
+
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              id="state"
+              label="state"
+              name="state"
+              autoComplete="state"
+              autoFocus
               onChange={this.handleChangeFields}
             />
 
@@ -92,13 +137,12 @@ class Request extends Component {
               color="primary"
               className={classes.submit}
             >
-              Next{" "}
+              UPDATE{" "}
             </Button>
-            {/* <ToastContainer /> */}
           </div>
         </div>
       </Container>
     );
   }
 }
-export default withStyles(useStyles)(Request);
+export default withStyles(useStyles)(Profile);
